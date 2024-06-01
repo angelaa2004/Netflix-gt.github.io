@@ -1,0 +1,272 @@
+:root {
+	--rojo: #E50914;
+	--fondo: #141414;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+	background-color: rgb(24, 24, 24);
+}
+
+body::-webkit-scrollbar{
+    width: 4px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: rgb(93, 92, 92);
+    border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background: rgb(204, 196, 196);
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	padding: 5px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+}
+
+header nav a {
+	color: #AAA;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+	color: #FFF;
+}
+
+/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+.pelicula-principal {
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fff;
+	background: linear-gradient(to top,  rgb(24, 24, 24), transparent), url(../images/peliculas/mamma.jpg);
+	background-position: center center;
+	background-size: cover;
+	display: flex;
+	align-items: end;
+}
+
+.pelicula-principal .contenedor {
+	margin: 0 auto;
+	margin-bottom: 6.25em;
+}
+
+.pelicula-principal .titulo {
+	font-weight: 600;
+	font-size: 3.12em;
+	margin-bottom: 0.4em;
+}
+
+
+
+.pelicula-principal .boton {
+	background: rgba(0,0,0, 0.5);
+	border: none;
+	border-radius: 0.31em;
+	padding: 0.93em 1.87em;
+	color: #fff;
+	margin-right: 1.25em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+}
+
+.pelicula-principal .boton:hover {
+	background: #fff;
+	color: #000;
+}
+
+.pelicula-principal .boton i{
+	margin-right: 1.25em;
+}
+
+
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula-principal {
+		font-size: 14px;
+	}
+
+	.pelicula-principal .descripcion {
+		max-width: 100%;
+	}
+}
+
+
+
+/*------------------------------------------------------------------------------------*/
+
+  
+  main {
+	/* border: 1px solid red; */
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+  }
+
+.list-content::-webkit-scrollbar{
+    height: 4px;
+	padding-left: 4em;
+}
+
+.list-content::-webkit-scrollbar-thumb{
+    background: rgb(93, 92, 92);
+    border-radius: 8px;
+}
+
+.list-content::-webkit-scrollbar-thumb:hover{
+    background: rgb(204, 196, 196);
+}
+
+
+p {
+	color: rgb(147, 142, 142);
+	/* border: 1px solid green; */
+	padding-left: 5em;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  
+  .top{
+	padding-left: 5em;
+	width: 8%; 
+	height: 8%; 
+	float: left; 
+
+
+  }
+
+  h1{
+	color: white;
+	padding-left: 6em;
+	font-size: 1.5em;
+  }
+  .descripcion{
+	text-align: left;
+	padding-left: 3.75em;
+	font-size: 1.3em;
+	color: white;
+  }
+
+
+  .tab-list {
+	/* border: 1px solid green; */
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-auto-flow: column;
+	list-style: none;
+	color: #6e6e6e;
+	padding-bottom: 1em;
+  }
+  .tab-list a {
+	color: #232323;
+  }
+  
+  .tab-item {
+	/* border: 1px solid purple; */
+	text-align: center;
+	font-size: .9em;
+  }
+  
+  .tab-item svg {
+	display: block;
+	/* border: 1px solid red; */
+	margin: auto;
+  }
+  
+  .tab-item path{
+	fill: #373535;
+  }
+  
+  /* .tab-item:hover path, .tab-item:hover span{
+	color: blue;
+	fill: blue;
+  } */
+  
+  .tab-item:hover :is(path, span) {
+   fill: white;
+   color: white;
+  }
+
+  h2 {
+	color: #FFF;
+  }
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------*/
+
+.list-content {
+	/* border: 1px solid red; */
+	white-space: nowrap;
+	overflow-x: auto;
+	padding-left: 4em;
+  }
+  .list-item {
+	display: inline-block;
+	margin-left: 10px;
+	border-top-left-radius: 15px;
+  }
+  .list-item:first-child {
+	margin: 0;
+  }
+  
+  .list {
+	/* border: 1px solid green; */
+	padding: 0 1em;
+  }
+  h2{
+	padding-left: 2.5em;
+  }
+  
+  main .derecha {
+	text-align: left;
+	margin-left: 65em;
+	margin-top: -15em;
+  }
+
+  h4 {
+	padding-left: 1em;
+  }
